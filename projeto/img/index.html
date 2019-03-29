@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>HTML5 and JavaScript</title>
+<style>
+* {background-color: #22262F;}
+canvas {border: 2px solid; border-color: #000000; background-color: #060A10}
+h2, h3 {color: #FFFF00; font-family: "Trebuchet MS", sans;}
+</style>
+    </head>
+    <body>
+        <div align="center">
+            <canvas id="gameCanvas" width="960" height="540"></canvas>
+            <h2 id="score"></h2>
+            <h3 id="info"></h3>
+        </div>
+    <script>
+        //Time for some stinkin JS
+        var canvas = document.getElementById("gameCanvas");
+        var ctx = canvas.getContext("2d");
+
+//        ctx.beginPath();
+//        ctx.rect(60, 100, 160, 90);
+//        ctx.fillStyle = "#00a2e8";
+//        ctx.fill();
+//        ctx.closePath();
+//
+//        ctx.beginPath();
+//        ctx.arc(120, 160, 20, 0, Math.PI*2, false);
+//        ctx.fillStyle = "#ffcc00";
+//        ctx.fill();
+//        ctx.closePath();
+        //Variable with which we'll make colours
+        var hex = "0123456789ABCDEF";
+        //Every game needs some points
+        var score = 0;
+        var mtplier = 1;
+        var biggestcombo = 0;
+        var lives = 3;
+        //Ball properties
+        var x = canvas.width/2;
+        var y = canvas.height-30;
+//        var dx = 5;
+        var dx = -5+(Math.random()*10);
+        var dy = -5;
+        var ballRadius = 10;
+        var ballColor = "#FFFFFF";
+        //Paddle properties
+        var paddleWidth = 96;
+        var paddleHeight = 16;
+        var paddleX = (canvas.width/2)-(paddleWidth/2);
+        var paddleY = canvas.height - 20;
+        var leftPress = false;
+        var rightPress = false;
+        //Brick properties
+        var brickRowCount = 5;
+        var brickColumnCount = 8;
+        var brickWidth = 70;
+        var brickHeight = 20;
+        var brickPadding = 20;
+        var brickOffsetTop = 75;
+        var brickOffsetLeft = 120;
+        //Creating all brick objects
+        var bricks = [];
+        var bricksleft = 0;
+        for (var c = 0; c < brickColumnCount; c++) {
+            bricks[c] = [];
+            for (var r = 0; r < brickRowCount; r++) {
+                bricks[c][r] = { x: 0, y: 0, color: brickColor(), status: 1 };
+                bricksleft += 1;
+            }
+        }
+        //Drawing functions for the ball
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = ballColor;
+            ctx.fill();
+            ctx.closePath();
+        }
+        //Drawing functions for the paddle
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, paddleY, paddleWidth, paddleHeight);
+            ctx.fillStyle = ballColor;
+            ctx.fill();
+            ctx.closePath();
+        }
+        //Drawing the score
+        function drawScore() {
+//            ctx.font = "16px Arial";
+//            ctx.fillStyle = "#88AAFF";
+//            ctx.fillText("Score: "+score, 8, 20);
+            document.getElementById("score").innerHTML = "Score: "+ Number(score);
+            document.getElementById("info").innerHTML = "Biggest Combo: "+ Number(biggestcombo) + "<br>Bricks left: " + Number(bricksleft) + "<br>Lives: " + Number(lives);
+        }
+        //Collision detection for the bricks
+        function brickCollision() {
+            for (var c = 0; c < brickColumnCount; c++) {
+                for (var r = 0; r < brickRowCount; r++) {
+                    var b = bricks[c][r];
+                    //If the ball is within the boundaries of the brick b, then...
+                    if ((y+ballRadius >= b.y && y-ballRadius <= b.y+brickHeight) && (x+ballRadius >= b.x && x-ballRadius <= b.x+brickWidth) && b.status == 1) {
+                        if (y > b.y + brickHeight) { if (dy < 0) { dy *= -1;}} //Collision from the bottom
+                        if (y < b.y) { if (dy > 0) { dy *= -1;}}               //Collision from the top
+                        if (x > b.x + brickWidth) { if (dx < 0) { dx *= -1;}}  //Collision from the right
+                        if (x < b.x) { if (dx > 0) { dx *= -1;}}               //Collision from the left
+                        b.status = 0; //Set the brick to 'inactive'
+                        bricksleft -= 1;
+                        score += 100*mtplier; //Award score
+                        if (mtplier > biggestcombo) {
+                            biggestcombo = mtplier;
+                        }
+                        mtplier += 1; //Increase multiplier
+                    }
+                }
+            }
+        }
+        //Drawing functions for the bricks
+        function drawBricks() {
+            var grd = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            grd.addColorStop(0, "turquoise")
+            grd.addColorStop(1, "blue");
+            for (var c = 0; c < brickColumnCount; c++) {
+                for (var r = 0; r < brickRowCount; r++) {
+                    if (bricks[c][r].status == 1) { //Only draw the brick if it is active
+                        var brickX = (c*(brickWidth+brickPadding)) + brickOffsetLeft;
+                        var brickY = (r*(brickHeight+brickPadding)) + brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        ctx.beginPath();
+                        ctx.rect(bricks[c][r].x-2, bricks[c][r].y-2, brickWidth+4, brickHeight+4);
+                        // ctx.fillStyle = bricks[c][r].color;
+                        ctx.fillStyle = "#000000";
+                        ctx.fill();
+                        ctx.closePath();
+
+                        ctx.beginPath();
+                        ctx.rect(bricks[c][r].x, bricks[c][r].y, brickWidth, brickHeight);
+                        ctx.fillStyle = grd;
+                        ctx.fill();
+                        ctx.closePath();
+                    }
+                }
+            }
+        }
+        //Function with which to change the color of the paddle and ball
+        function changeColor() {
+                ballColor = "#";
+                for (var i = 0; i<6; i++) {
+                    ballColor += hex[Math.floor(Math.random() * 16)];
+                ballColor = "#FFFFFF";
+                }
+        }
+        //Function that defines the colors of the bricks
+        function brickColor() {
+            Color = "#";
+            for (var i = 0; i<6; i++) {
+                Color += hex[Math.floor(Math.random() * 16)];
+            }
+            return Color;
+        }
+        //Main loop function
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); //Prevent objects from leaving traces behind
+            //Move the ball
+            x += dx;
+            y += dy;
+            //Check if game has completed
+            if (bricksleft == 0) {
+                score += lives * 2500;
+                drawScore();
+                clearInterval(mainloop);
+            } 
+            //Draw everything and do collision checks at every loop
+            drawBall();
+            drawPaddle();
+            drawBricks();
+            drawScore();
+            brickCollision();
+            //Check input
+            if (rightPress && paddleX < canvas.width-paddleWidth) {
+                paddleX += 12;
+            }
+            if (leftPress && paddleX > 0) {
+                paddleX -= 12;
+            }
+            //Check collisions between the ball and the world and the paddle
+            if (x >= canvas.width-ballRadius || x <= ballRadius) { //Check for collisions agains the walls
+                if (x >= canvas.width-ballRadius && dx > 0) {
+                    dx *= -1;
+                }
+                if (x <= ballRadius && dx < 0) {
+                    dx *= -1;
+                }
+                changeColor();
+            }
+            if (y <= ballRadius) { //Check for when the ball collides against the ceiling
+                dy *= -1;
+                changeColor();
+            }
+            if (y > canvas.height+ballRadius*5) { //Check for when the ball falls down the pit
+                lives -= 1;
+                if (lives < 0) {
+                    clearInterval(mainloop);
+                }
+                else {
+                    x = (paddleX+(paddleX+paddleWidth))/2;
+                    y = canvas.height-30;
+                    dx = -5+(Math.random()*10);
+                    dy = -5;
+                    mtplier = 1;
+                }
+            }
+            if ((y+ballRadius >= paddleY && y-ballRadius <= paddleY+paddleHeight) && (x+ballRadius >= paddleX && x-ballRadius <= paddleX+paddleWidth)) {
+                if (dy > 0) { //Prevent the paddle from making the ball descend
+                    dx = (dx + (x - (paddleX + paddleWidth/2))/(paddleWidth/16))/2
+                    dy *= -1; //It'll only ascend
+                    changeColor();
+                    dy -= 0.1; //And get a wee bit faster
+                    mtplier = 1; //And reset the multiplier
+                }
+            }
+        }
+
+        //Listen for key presses and releases
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+        // 39 is Right and 37 is Left, therefore:
+        function keyDownHandler(e) {
+            if (e.keyCode == 39) {
+                rightPress = true;
+            }
+            if (e.keyCode == 37) {
+                leftPress = true;
+            }
+        }
+
+        function keyUpHandler(e) {
+            if (e.keyCode == 39) {
+                rightPress = false;
+            }
+            if (e.keyCode == 37) {
+                leftPress = false;
+            }
+        }
+        //Start game's main loop:
+        mainloop = setInterval(draw, 1000/60);
+    </script>
+    </body>
+</html>

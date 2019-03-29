@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--tem que colocar o viewport se não não funciona o respansivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas HTML 5</title>
+    <!--mo estyle é CSS-->
+    <style>
+        /*todos os elementos irá usar*/
+        *{
+            /*calculo de porgentamento o tamanho dentro do elemento (evita quebra)*/
+            box-sizing: border-box;
+            /*mudar o fonte da página inteira*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+           /*background-color: red;*/
+           /*do emelento para dentro*/
+           padding: 0;
+           /*do elemento pra fora*/
+           margin: 0;                      
+        }
+    h1{
+        /*muda a cor da letra*/
+        color:#ffffff;
+        /*muda a cor do funfo da letra*/
+        background-color:#000000;
+        /*tamanho da faixa de cor do fundo- INTERNO*/
+        padding: 10px;
+        /*coloca no centro*/
+        text-align: center;
+        margin: 0;
+        /*arredondou a dorda da escrita de dentro*/
+        border-radius: 10px;
+    }
+    /*quando criado o 'container' no stylo coloque-o com #*/
+    #container{
+        /*centralizar 0: horizontal auto: vertical*/
+        margin: 0 auto;
+        /*usa essa porcentagem no total da página e centralizado*/
+        width: 80%;
+        background-color: #a1a1a1;
+        /*ladinho de dentro*/
+        padding: 10px;
+        /*borda arredondada de tudo que está no container*/
+        border-radius: 10px;
+    }
+    img{
+        /*imagem fica em 100% da página - largura (lembrando da porcentagem do container*/
+        width: 48%;
+        /*aqui é o ajuste dependendo da tela altura*/
+        height: 550px;
+        /*borda das imagens  px: tamanho solid: tipo e cor*/
+        border: 1px solid black;
+        /*entre as imagens*/
+        margin: 1%;
+        float: left;
+        /*espaço entre elas*/
+        padding: 10px;        
+        /*fica tipo borda de quadro*/
+        background-color: #7c7c7c;
+    }
+    /*efeito do mouse quando passa  hover*/
+    img:hover{
+        background-color: #dfdbdb ;
+    }
+    footer{
+        /*jogando o footer nas imagens*/
+        float: left;
+        /*largura*/
+        width: 100%;
+        /*altura*/
+        height: 120px;
+        background-color :black;
+        color: white; 
+        border-radius: 10px;
+        /*deixar o texto em negrito*/
+        font-weight: bold;
+        /*centraliza o texto*/
+        text-align: center;
+        /*tamanho da fonte*/
+        font-size: 15px;
+        /*descolou*/
+        padding: 15px;
+    }
+    /*correção do bug*/
+    header{
+        float: left;
+        width: 100%;
+        height: 150%;
+    }
+    main{
+        float: left;
+    }
+    /*começa com ponto pq é uma classe (qual elemento vai ter essa classa)*/
+    .limpar{
+        clear: both;
+    }    
+    /*vai destacar com cor o tecni...*/
+    .destaque{
+        color:red;
+        border: 1px dashed white;
+        padding: 5px;
+    }
+    .destaque:hover{
+        color: white;
+        background-color: red;
+    }
+    /*mudar a bolinha*/
+    ul li{
+        list-style-type: square;
+    }
+    /*para celular*/
+    /*@media ... quando a tela tiver uma autura máxima de 600px é telular */
+    @media screen and (max-width: 600px) {
+        img{
+            width: 100%;
+            margin: 0%;
+            /*entre as imagens no horizontal*/
+            margin-bottom: 10px;
+            height: 300px ;
+
+        } 
+    #container{
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <!--o container junta todo o conteúdo da página(formatado no style) -->
+    <div id="container">
+        <header>
+            <h1>Listas HTLM5</h1>
+            <h2>Aula 2</h2>
+        </header>
+        <main>            
+            <section id="listaOrdenada">
+                <h2>Listas HTML5:</h2> 
+                <p>Exemplo de como montar uma lista ordenada utilizando a <span class="destaque">linguegem HTLM5</span></p>
+                <h3>Receita de macarrão simples!</h3>
+                <h4>Ingredientes:</h4>
+                <ul>
+                    <li>1/2 Kg de macarrão parafuso ou fidelinho</li>
+                    <li>2 litro de água</li>
+                    <li>1 colher de sal</li>
+                    <li>1 colher de sopa de óleo</li>
+                </ul>
+                <h4>Mode de Preparo</h4>
+                <ol>
+                    <li>Coloque a água para ferver;</li>
+                    <li>Quando estiver fervendo coloque o sal, 1 colher de óleo;</li>
+                    <li>Qunado o macarrão estiver mole, tire do fogo e escorra a água no escorredor de macarrão;</li>
+                    <li>Faça o molho de sua preferência em outra panela.</li>
+                </ol>
+                <h4>Fotos:</h4>
+                <img src="img/foto1.jpg" alt="Foto:Macarrão simples">
+                <img src="img/foto2.jpg" alt="Foto:Macarrão prato de lado">
+            </section>
+        </main>
+        <footer>
+            <!--span é uma marcação e a class faz com que este fique com uma formatação específica-->
+            <p>Desenvolvido por <span class="destaque">Técnico em Informática 2017C</span></p>
+        </footer>       
+            <!-- resolve o problema / limpar flutuação / ver onde termina -->
+        <div class="limpar"> </div>        
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flexivel HTML5</title>
+    <style>/*Abertura do CSS3*/
+    /* o asterisco aplica para todos os elementos da pagina*/
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-color: #666666
+
+    }
+    #container{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: 0px 0px 20px black;
+
+    }
+        header{
+            width: 100%;
+            height: 200px;
+            float:left;
+            background-color: rgb(255, 255, 255)
+        }
+        main{
+            width: 100%;
+            height: auto;
+            float: left;
+            background-color: rgb(240, 240, 240)
+        }
+        #futebol{
+            width: 50%;
+            height: 400px;
+            float: left;
+            background-color: rgb(255, 0, 0);
+        }
+        #basquete{
+            width: 50%;
+            height: 400px;
+            float: left;
+            background-color: rgb(255, 251, 0)
+        }
+        #natacao{
+            width: 33.3%;
+            height: 400px;
+            float: left;
+            background-color: silver
+        }
+        #volei{
+            width: 33.3%;
+            height: 400px;
+            float: left;
+            background-color: rgb(17, 14, 206)
+        }
+        #ciclismo{
+            width: 33.3%;
+            height: 400px;
+            float: left;
+            background-color: rgb(20, 216, 13)
+            
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            float: left;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .limpar{
+            clear: both;
+        }
+        /* Final do CSS da versao DESKTOP*/
+
+
+        /*Inicio do CSS versao Mobile */
+        @media screen and (max-width:768px){
+            #container{
+                width: 95%
+            }
+            #futebol{
+                width: 100%;
+                padding: 10px;
+            }
+            #basquete{
+                width: 100%;
+                padding: 10px;
+            }
+            #natacao{
+                width: 100%;
+                padding: 10px;
+            }
+            #volei{
+                width: 100%;
+                padding: 10px;
+            }
+            #ciclismo{
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <header>
+         Tag do Cabeçalho da página
+    </header>
+    <main>
+        <section id="futebol">
+            Aqui sera Add o conteudo de futebol
+        </section>
+        <section id="basquete">
+            aqui sera add conteudo de basquete
+        </section>
+        <section id="natacao">
+            Aqui sera Add o conteudo de natação
+        </section>
+        <section id="volei">
+            Aqui sera Add o conteudo de Volei
+        </section>
+        <section id="ciclismo">
+            Aqui sera Add o conteudo de Ciclismo
+        </section>
+    </main>
+    <footer>
+        Aqui sera o footer
+    </footer>
+    <div class="limpar"></div>
+    </div>
+    
+</body>
+</html>

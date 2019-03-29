@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design ulilizando VH e VW</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <!--aqui está o link da fonte escolhida, vai no google fonte, escolhe a fonte e aperte o mais-->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="container">
+            <a href="#container" class="suave" id="topo"><i class="fas fa-angle-double-up cortopo fa-2x"></i></a>
+        <!--VH pega o tamanho exato da tela - trabalha com a resolução-->
+            <nav>
+                <ul>
+                    <a class="suave" href="#principal"><li>Principal</li></a>
+                    <a class="suave" href="#parallax"><li>Personagens</li></a>
+                    <a class="suave" href="#historia"><li>História</li></a>
+                    <a class="suave" href="#contato"><li>Contato</li></a>
+                </ul>
+            </nav>
+        <section id="principal">
+            <!-- texto centralizado dentro de uma section ou div-->
+            <h2 class="h2principal">Hakuouki</h2>
+            
+            
+        </section>
+        
+
+        
+        <section class="parallax" id="parallax">
+            <a href="#container" id="topo"> topo<i class="fas fa-angle-double-up cortopo fa-2x"></i></a>
+            <h2>Personagens</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed tempor felis, ac luctus ligula. Aliquam condimentum orci et risus posuere, ut sollicitudin mauris malesuada. Sed neque tortor, aliquam vitae euismod semper, dapibus sit amet nulla. Sed suscipit odio quis tincidunt commodo. Curabitur ut eleifend quam, eu pretium quam. Nunc a odio gravida, consectetur purus sit amet, faucibus erat.  Phasellus faucibus ornare purus sit amet maximus. Sed convallis imperdiet varius. Quisque id quam arcu.</p>
+            <div id="divimg">
+            <figure>
+                <img src="img/per1.jpg" alt="Harada Sanosuke">
+                <figcaption>
+                    Harada Sanosuke
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="img/per2.jpg" alt="Chizuru Yukimura">
+                <figcaption>
+                    Chizuru Yukimura
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="img/per3.jpg" alt="Saitou Hajime">
+               
+            </figure>
+            <figcaption>
+                    Saitou Hajime
+                </figcaption>
+            </div>
+        </section>
+        
+        
+        <section id="demonio">
+            <h2 class="h2principal">Toshizou Hijikata</h2>
+        </section>
+
+        <section class="parallax1" id="historia">
+            <h2>História</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin hendrerit libero, quis lacinia eros ullamcorper vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean tincidunt lobortis arcu, maximus facilisis risus sodales a. Suspendisse nec felis dui. Praesent at fringilla nisi. Sed diam arcu, tristique in scelerisque nec, egestas a sapien. Aliquam aliquet urna ac nisl auctor venenatis. Mauris volutpat maximus nunc a facilisis. Vivamus blandit laoreet metus, quis pharetra est.</p>
+
+                   <p> Vivamus sit amet orci malesuada, facilisis lacus sit amet, varius metus. Etiam sed interdum nulla. Phasellus sed ligula imperdiet, fringilla leo in, aliquam turpis. Proin molestie arcu tortor, nec consectetur dui venenatis vel. Aliquam tincidunt ipsum vitae odio vestibulum facilisis. Sed hendrerit augue dui, eu fringilla eros aliquam sit amet. Fusce mattis, lectus ac vehicula eleifend, ipsum mi mattis dolor, ut congue neque sapien a magna. Nullam ipsum tellus, pulvinar et rutrum et, molestie ac odio. Aliquam erat volutpat. In hac habitasse platea dictumst.</p>
+        </section>
+        <section id="img3"></section>
+        <section class="parallax1" id="contato">
+            
+            <h2><i class="far fa-paper-plane fa-1x"></i> Fale Conosco</h2> 
+            <br>            
+            <form id="form_contato" action="">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="digite o nome">
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="digite o telefone">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="e-mail de contato">
+                <br>
+                <label for="msg">Digite sua Mensagem</label>
+                <textarea id="msg" name="msg" placeholder="digite sua mensagem"></textarea> 
+                <input type="submit" value="Enviar">
+                
+            </form>
+        
+
+        </section>
+            <footer>
+                <p><span>Endereço:</span> R. São João, 204 - Centro, São João da Boa Vista - SP, 13870-222</p>
+                <p><span>Telefone:</span> (19) 3366-1100</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.715253948475!2d-46.79504984403517!3d-21.98388896499277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9cb63bd861b47%3A0x64b32b3322de67a3!2sR.+S%C3%A3o+Jo%C3%A3o%2C+204+-+Centro%2C+S%C3%A3o+Jo%C3%A3o+da+Boa+Vista+-+SP%2C+13870-222!5e0!3m2!1spt-BR!2sbr!4v1543874190636" id="mapa" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            </footer>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(".suave").click(function(event){
+            event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href')).offset().top-$("nav").height()
+        }, 1500);
+        });
+    </script>
+    <script>
+        window.onscroll = function() {scrollFunction()}
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementsByTagName("nav")[0].style.backgroundColor = "#1b3e9cFF";
+                document.getElementById("topo").style.top = "calc(100% - 64px)";
+            }
+            else {
+                document.getElementsByTagName("nav")[0].style.backgroundColor = "#00000000";
+                document.getElementById("topo").style.top = "150%";
+            }
+        }
+        
+    </script>
+    
+    
+    
+</body>
+</html>

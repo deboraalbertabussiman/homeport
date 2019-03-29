@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela - HTML5</title>
+    <style>
+        /*class cham com ponto(varios elementos) , id chama com #(elemento único)*/
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #container{
+            width: 80%;
+            height: auto;
+            /*centraliza*/
+            margin: 0 auto;
+            /*borda em todo contaúdo*/
+            border: 0px solid black;
+            /*sombra na borda*/
+            box-shadow: 0px 0px 30px black; 
+            background-color:#f0ecec
+        }
+        main{
+            padding: 10px;
+        }
+        header{
+            width: 100%;
+            height: 200px;
+            float: left;
+            background-color: #e006bc;
+            /*png*/
+        }
+        #imglogo{
+            /*criar uma id pra logo pq só vai formatar ele*/
+            width: auto;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        #historia{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        #fabricantes{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        #modelos{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        /*toda a tabela*/
+        table{
+            width: 95%;
+            /*centralizar*/
+            margin: 0 auto;
+            /*tira todas as brodas*/
+            border-collapse: collapse;
+            /* borda da tabela border: 4px solid black;*/
+           /* sombra da tabela box-shadow: 0px 0px 20px #000000;*/
+            text-align: center;
+            
+        }
+        /*primeira linha da tabela*/
+        table thead th{
+            background-color: #000000;
+            color: white;   
+            padding: 10px;       
+        }
+
+        /*elementos básicos*/
+        /*td,th{
+            border: 1px solid black;
+        }
+        td{
+            background-color: antiquewhite;
+        }*/
+        /*impar*/
+        tr:nth-child(odd){
+            background-color: #e006bc;
+            
+            }
+        /*par*/
+        tr:nth-child(even){
+            background-color: #df80b3;
+                 
+        }
+        td,th{
+            /*altura da linha*/
+            padding: 10px;
+        }
+        /*borda horizontal*/
+        /*tr{
+            border-bottom: 2px solid black;
+        }*/
+        #galeria{
+            width: 100%;
+            height: auto;
+            float: left;
+            text-align: center;
+        }
+        figure{
+            /*border: 2px solid black;*/
+           /* padding: 5px;*/
+            width: 45%;
+            height: auto;
+            margin: 15px;
+            display: inline-block;
+            box-shadow: 0px 0px 16px #000000;
+        }
+        figure img{
+            width: 100%;
+            height: 400px;
+        }
+        #video{
+            width: 100%;
+            height: auto;
+            float: left;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .video{
+            width: 80%;
+            height: 500px;
+        }
+        .limpar{
+            clear: both;
+        }
+        #topo{
+            width: 100%;
+            height: auto;
+            float: left;     
+            text-align: right;
+            padding: 30px;
+            margin-top: 15px;                  
+        }
+        #imgtopo{
+            width:6%;
+            height: 50px;
+            box-shadow: 0px 0px 16px #d85db9
+           
+
+
+        }
+
+
+
+
+
+        
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img id="imglogo" src="img/logo.png" alt="logo">
+
+        </header>
+        <main>
+            <section id="historia">
+                <h1>HISTÓRIA DO AUTOMÓVEL</h1>
+                <p>O primeiro veículo motorizado a ser produzido com propósito comercial foi um carro com apenas três rodas. Este foi produzido, em 1885, pelo engenheiro alemão Karl Benz e possuía um motor a gasolina. Chamado de motorwagen (carro motorizado), as primeiras unidades foram produzidas pela empresa do inventor, a Benz & Co., na cidade alemã de Mannheim. Com sistema de arranque a manivela, este primeiro automóvel tinha potência de 0,8 cv, podendo atingir 18 km/h.</p>
+                <p>Outro engenheiro alemão foi de extrema importância nestes primórdios da história do automóvel. Em Stuttgart, Gottlieb Daimler inventou, em 1886, o primeiro veículo de quatro rodas com motor de combustão interna. Sua invenção atingia a velocidade máxima de 16 km/h.</p>
+            </section>
+            <section id="fabricantes">
+                <h2>Fabricantes</h2>
+                <p>Conheça as fabricantes de automóveis mais famosas no mercado mundial</p>
+                <ul>
+                    <li>Ford</li>
+                    <li>Volkswagen</li>
+                    <li>Fiat</li>
+                    <li>Toyota</li>
+                    <li>Honda</li>
+                    <li>Chevrolet</li>
+                    <li>Hyundai</li>
+                </ul>
+            </section>
+            <section id="modelos">
+                <h2>Modelos de automóveis:</h2>
+                    <table>
+                        <thead>
+                            <!--cabeçalho da tabela-->
+                            <th>Modelo</th>
+                            <th>Fabricante</th>
+                            <th>Combústivel</th>
+                            <th>Ano</th>
+                            <th>Transmissão</th>
+                        </thead>
+                        <!--tabela-->
+                        <tbody>
+                            <!--tr primeira linha da tabela-->
+                            <!--tr depois td-->
+                            <tr>
+                                <td>Fusca</td>
+                                <td>Volkswagen</td>
+                                <td>Gasolina</td>
+                                <td>1976</td>
+                                <td>Manual</td>
+                            </tr>
+                            <tr>
+                                <td>Opala</td>
+                                <td>Chevrolet</td>
+                                <td>Gasolina</td>
+                                <td>1982</td>
+                                <td>Manual</td>
+                            </tr>
+                            <tr>
+                                <td>Corcel</td>
+                                <td>Ford</td>
+                                <td>Gasolina</td>
+                                <td>1978</td>
+                                <td>Manual</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+            <section id="galeria">
+                <h2>Galeria de Imagens</h2>
+                <!--elemento html 5 para colocar imagens-->
+                <figure>
+                    <img src="img/img1.jpg" alt="Carro Antigo">
+                </figure>
+                <figure>
+                    <img src="img/img2.jpg" alt="Carro Antigo">
+                </figure>
+                <figure>
+                    <img src="img/img3.jpg" alt="Carro Antigo">
+                </figure>
+                <figure>
+                    <img src="img/img4.jpg" alt="Carro Antigo">
+                </figure>
+
+            </section>
+            <section id="video">
+                <h2>Galeria de Videos</h2>
+                <iframe  class="video" src="https://www.youtube.com/embed/lR-OVJfJ-Eo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </section>
+            <!--voltar ao topo, primeiro cria-se um link que volta para o container-->
+        <div id="topo">
+            <a href="#container"><img id="imgtopo" src="img/topo.png" alt="para o topo"></a>
+        </div>
+
+
+        </main>
+
+
+
+
+
+    <div class="limpar"></div>
+    </div>
+    
+
+    </div>
+    
+</body>
+</html>

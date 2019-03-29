@@ -1,0 +1,26 @@
+@media only screen and (max-width: 762px){
+    nav{
+        font-size: 0.8em;
+    }
+
+figure{
+    width: 100%;
+    height: auto;
+}
+
+input[type=date]{
+   height: 30px;
+   width: 100px;;
+}
+#form_curriculo{
+    width: 100%;
+}
+}
+@media only screen and (max-width: 1200px){
+   figure{
+       height: 300px;
+       width: 300px;
+   }
+   
+
+}

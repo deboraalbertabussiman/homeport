@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+header{
+    width: 100vw;
+    height: auto;
+    background-color: rgb(10, 10, 10);
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100vw;
+    height: auto;
+    background-color: rgb(153, 51, 102);
+    margin: 0;
+    padding: 0;
+}
+
+#principal{
+    width: 100vw;
+    height: auto;
+    padding: 15px;
+    background-color: #bc8f8f;
+}
+#curriculo{
+    width: 100vw;
+    height: auto;
+    padding: 15px;
+    background-color: #9c6161;
+}
+#buque{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    background: url(../img/buque.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#ff{
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    background: url(../img/ff.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+figure{
+    margin: 0 auto;
+    padding: 10px;
+    width: 30%;
+    display: inline-block;
+
+    
+    
+}
+
+img{
+    width: auto;  
+    height: auto;
+    box-shadow: 0 0 5px rgb(255, 255, 255)
+}
+
+#imagens{
+    text-align: center;
+}
+input[type=text], input[type=email]{
+    width: 100%;
+    padding: 12px 50px; 
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+input[type=text]:focus{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+input[type=email]:focus{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+textarea:focus{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+
+
+textarea{
+    height: 80px;
+    width: 100%;
+    padding: 12px 20px; 
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;  
+}
+input[type=submit]{
+    width: 100%;
+    background-color: #7a3434;
+    color: white;
+    font-weight: bolder;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    text-align: center;
+    margin: 0 auto;
+
+}
+input [type=submit]{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+#form_curriculo{
+    width: 85%;
+    margin: 0 auto;
+    
+}
+h2{
+    font-size: 3em;
+    text-align: center;
+    color: #660101;
+    text-shadow: 0 0 5px black;
+}
+h3{
+    font-size: 2em;
+}
+h4{
+    font-size: 1em;
+}
+p{
+    text-align: center;
+    font-size: 2em;
+}
+#letra{
+    text-align: center;
+    font-size: 3em;
+}
+nav{
+    background-color: rgb(241, 187, 187);
+    top: 0px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(136, 102, 102);
+    width: 100vw;
+    height: auto;
+    box-shadow: 0 0 25px black;
+    position: fixed;
+}
+nav li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    
+}
+nav li:hover{
+    transform: scale(1.1)
+
+}
+nav ul{
+    margin:0px;
+    padding: 0px;
+}
+footer p{
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+
+}
+#mapa{
+    width: 80vw;
+    height: 50vh;
+    box-shadow: 0 0 20px black;
+    margin-top: 30px;
+    
+}
+span{
+    color: black;
+    font-size: 24px;
+    padding: 25px;
+}
+footer{
+    background-color: #754a4a;
+    width: 100vw;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+    color: white;
+    
+}
+#logo{
+    margin: 0 auto;
+    background-color: white;
+}
+img{
+    width: 60vw;
+    height: auto;
+}

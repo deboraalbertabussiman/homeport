@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider-Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="stilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--font awe-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- bg-danger cor de fundo com responsivo ja pronto, fica em 80% e vai dininuindo
+    container=80%
+container-flid=100% -->
+    <div class="container-fluid bg-dark text-white p-0 m-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#"><i class="fas fa-caret-square-down" style="color:purple"></i></a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contato">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <main class="pt-5">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100"  src="img/harry.jpg" alt="Primeiro Slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="img/hpjogo.jpg" alt="Segundo Slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="img/ordem.jpg" alt="Terceiro Slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Próximo</span>
+                    </a>
+                  </div>
+                  <!--aqui o modal  a caixinha com coisas-->
+                  <div class="row col-md-6 mx-auto p-5">
+                  <section id="sobre" class="pt-5">
+                      <div class="card text-dark">
+                          <div class="card-header">
+                            Conheça a Nossa empresa
+                          </div>
+                          <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta placerat posuere. Morbi sit amet nunc ac quam aliquam commodo. Praesent et mi sollicitudin, mollis ante ut, lobortis eros. Praesent eu diam a lectus posuere lacinia. Maecenas a dapibus dui, in bibendum nulla. Aliquam non dolor eget sem mollis pretium. Morbi a pharetra nisl, vitae gravida neque.</p>
+                            <!-- Botão para acionar modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                                    Leia Mais
+                                  </button>
+                                  
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Nossa História</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <!--coisinhas a mais , mais texto -->
+                                        <div class="modal-body">
+                                            ...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum, neque eu ornare imperdiet, nisi mauris posuere metus, eu sodales mi tellus nec tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc feugiat fermentum mollis. Morbi dictum, nunc eu faucibus bibendum, risus dolor mollis orci, in interdum ligula ante at mauris. Cras venenatis enim sed odio faucibus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse feugiat sapien nisi, vel placerat odio vulputate at. Morbi hendrerit suscipit augue, fermentum scelerisque orci placerat quis. Vivamus porttitor, ligula in finibus porta, erat velit tristique mi, pulvinar sollicitudin felis nisl mollis enim. Praesent dui purus, imperdiet nec hendrerit quis, auctor ut ligula. Quisque et hendrerit tellus. Aliquam eu tempor est.
+                                            Maecenas ac quam dapibus, vulputate erat a, elementum tellus. Integer turpis metus, ultrices id justo vitae, blandit elementum libero. Nam felis mauris, suscipit ut nibh eu, sollicitudin varius ante. Vivamus finibus tristique quam, ut condimentum libero feugiat vel. Sed vulputate tincidunt egestas. Ut tristique tristique elit, et cursus nunc aliquam maximus. Suspendisse quis purus malesuada lacus porttitor faucibus. Sed consequat vehicula nisi, ut euismod ante aliquet et. Ut ut augue metus. Cras aliquet nisi sit amet tempor sollicitudin. Sed mattis sem felis, at condimentum urna finibus in.
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                  </section>
+                  <!--aqui colocou o questionário e tudo - o pt-5 é pra funcionnar o menu direito-->
+                  <section id="contato" class="col-md-12 p-5 bg-danger pt-5">
+                    <h5 class="pb-3 text-center">Entre em contato conosco</h5>
+                    <div class="row">
+                      <div class="input-group mb-3 col-md-6">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Digite o Nome" aria-label="Usuário" aria-describedby="basic-addon1">
+                      </div>
+
+                      <div class="input-group mb-3 col-md-6">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
+                          </div>
+                          <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Usuário" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="far fa-comment fa-2x"></i></span>
+                        </div>
+                        <!--rows é o tamanho que fica o espaço do texto-->
+                        <textarea class="form-control" rows="6" aria-label="Com textarea" placeholder="mensagem"></textarea>
+                    </div>
+                    <div class="text-center">
+                    <button type="button" class="btn btn-dark text-center mt-3"><i class="fas fa-paper-plane"></i> Enviar</button>
+                    </div>
+                  </section>
+                  
+                </div>
+              </main>
+                  
+
+    </div>
+    <!--jquery sempre na frente-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -1,0 +1,289 @@
+*{
+    /*padding somado junto com o elemento*/
+    box-sizing: border-box;
+    max-width: 100%;
+}
+body{
+    /*tirar as margens com padding e margin - zerando a margem do body*/
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*sempre que for elemento único isa-se id, e quando for utilizado em varios lugares use-se class*/
+#principal{
+    /*vw =largura vh=altura*/
+    /*largura e altura*/
+    width: 100vw;
+    height: 100vh;
+    /*imagem de fundo caminho ../ volta pra raiz, no-repeat é pra não repetir
+    i fixed fica com efeito fixado efeto paralax*/
+    background: url(../img/img2.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*texte no meio da imagem , centralizado*/ 
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;   
+}
+.parallax{
+    width: 100vw;
+    height: auto;
+    background-color: #0f4ea0;
+    padding: 10px;
+    box-shadow: 0 0 25px black;
+    border-bottom: 1px solid black;
+}
+#demonio{
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    background: url(../img/img1.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center; 
+}
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: #00000000;
+    position: fixed;
+    top: 0px;
+    padding: 5px;
+    /*traço em baixo
+    border-bottom: 1px solid black;*/
+    transition-duration: 0.5s;
+   
+    
+}
+nav li{
+    /*um na frente do outro*/
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    font-size: 35px;
+    text-shadow: 0 0 20px black;
+    transition-duration: 0.5s;
+    
+      
+    /*arredondar bordinhas
+    border-radius: 5px;*/
+}
+nav ul{
+    margin:0px;
+    padding: 0px;
+}
+nav li:hover{
+    transform: scale(1.1)
+
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+p{
+    text-align: center;
+    font-size: 2em;
+}
+.parallax > p::first-letter{
+    font-size: 35px;
+
+}
+figure{
+    margin: 0 auto;
+    padding: 10px;
+    width: 33.3%;
+    float: left;
+}
+
+img{
+    width: 400px;  
+    height: auto;
+    transition-duration: 0.5s; 
+}
+#divimg{
+    text-align: center;
+}
+figcaption{
+    text-align: center;
+    font-style: italic;
+    color: rgb(10, 10, 10);
+}
+.h2principal{
+    color: #2b0daf;
+    font-family: 'Abril Fatface', cursive;
+    text-shadow: 0 0 30px #ffffff;
+    font-size: 5em;
+    /*texto um pouco pra cima ou pra baixo*/
+    margin-top: -30px;
+    /*efeito mais demorado*/
+    transition-duration: 0.5s;
+    
+}
+.h2principal:hover{
+    transform: scale(1.1)
+}
+#img3{
+    width: 100vw;
+    height: 90vh;
+    background-color: #281a64;
+    background: url(../img/img3.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.parallax1{
+    width: 100vw;
+    height: auto;
+    background-color: #0f4ea0;
+    padding: 10px;
+    box-shadow: 0 0 25px black;
+    border-bottom: 1px solid black;
+}
+/*formulário*/
+input[type=text], input[type=email]{
+    width: 100%;
+    padding: 12px 50px; 
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+#nome{
+    background-image: url('../img/icon.png');
+    background-position: 10px 9px;
+    background-repeat: no-repeat;
+}
+input[type=text]:focus{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+input[type=email]:focus{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+textarea:focus{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+#form_contato{
+    width: 70%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #0f4ea0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px black;
+}
+textarea{
+    height: 40px;
+    width: 100%;
+    padding: 12px 20px; 
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;  
+}
+input[type=submit]{
+    width: 100%;
+    background-color: #1215a8;
+    color: white;
+    font-weight: bolder;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    text-align: center;
+    margin: 0 auto;
+
+}
+input [type=submit]{
+    border:2px solid black;
+    box-shadow: 0 0 20px;
+}
+footer{
+    width: 100vw;
+    background-color: #7160bd;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+    color: white;
+}
+footer p{
+    margin: 0;
+    font-size: 1.5em;
+
+}
+#mapa{
+    width: 80vw;
+    height: 50vh;
+    box-shadow: 0 0 20px black;
+    margin-top: 30px;
+}
+span{
+    color: black;
+    font-size: 24px;
+}
+#topo{
+    position: fixed;
+    left: calc(100% - 80px);
+    transition-duration: 1s;
+    top: 150%;
+    text-shadow: 0 0 20px #ffffff;
+    color: #050505;
+    font-size: 30px; 
+
+}
+
+@media only screen and (max-width: 816px){
+    nav{
+        text-align: center;
+        position: fixed;
+    }
+    nav li{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    figure{
+        width: 100vw;
+    }
+    .parallax{
+        width: auto;
+        height: auto;
+    }
+    #form_contato{
+        width: 95%;
+    }
+    #mapa{
+        width: 95vw;
+        height: 40vh;
+    }
+}
+@media only screen and (max-width: 550px){
+    nav li{
+        font-size: 16px;
+        padding: 0;
+        }
+    nav{
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}

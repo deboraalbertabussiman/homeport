@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="icon" href="img/world_of_warcraft.ico" />
+    <title>Horda</title>
+</head>
+<body>
+    <div id="container">
+    
+        <header>
+			<nav id="menu">
+				<ul>
+                        <!--links para o menu-->
+          <li><img id="logo" src="img/logop.png" alt="Wor"></li>
+					<a href="#historia"><li>História</li></a>
+					<a href="#pelahorda"><li>Pela Horda</li></a>
+					<a href="#illidan"><li>Illidan</li></a>
+					<a href="#sylvanas"><li>Sylvanas</li></a>
+					<a href="#video"><li>Vídeos</li></a> 
+                   
+                  
+				</ul>
+			</nav> 
+			
+			
+			<div id="carrossel" class="carousel slide" data-ride="carousel">
+					<!-- indicadores -->
+					<ul class="carousel-indicators">
+					  <li data-target="#carrossel" data-slide-to="0" class="active"></li>
+					  <li data-target="#carrossel" data-slide-to="1"></li>
+            <li data-target="#carrossel" data-slide-to="2"></li>
+					</ul>
+					<!-- monta o carrossel -->
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<img src="img/01.jpg" alt="catacli">
+					  </div>
+					  <div class="carousel-item">
+						<img src="img/02.jpg" alt="illidan">
+					  </div>
+					  <div class="carousel-item">
+						<img src="img/03.jpg" alt="sylvans">
+            </div>
+					</div>
+					<!-- exibe as 'setinhas' para avançar e voltar as imagens -->
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					  <span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#demo" data-slide="next">
+					  <span class="carousel-control-next-icon"></span>
+					</a>
+				  </div>
+				</div>
+        </header>
+        
+	<main> 
+      <a href="#container" id="topo"><i class="fas fa-angle-double-up cortopo fa-2x"></i></a>
+    
+                <section id="historia" class="">
+           
+            <h1>World of Warcraft                    </h1>
+            <p>A Horda passa por dificuldades, momentos sombrios que parecem não findar. Mas a luz do sol espreita no horizonte, a hora mais escura é antes do amanhecer, e digo-lhes: Os espíritos não nos abandonaram.</p>
+
+            <p> Finalmente, o destino sorri para nós, e nenhuma chefe guerreira conseguirá podar nossa honra e tradições. </p>
+             <img id="wow1" src="img/logog.png" alt="World of Warcraft">                   
+                </section>
+                <section id="pelahorda">
+                    <h1>Pela Horda</h1>
+                        <p>A força da Horda vem da união. São guardiões fervorosos da liberdade e da esperança, opondo-se com garra a todos que ameaçarem tais ideais, inclusive à rigorosíssima Aliança.</h2>
+                        <section id="galeria"></p>
+                          
+                               
+                                <!--elemento html 5 para colocar imagens-->
+                                
+                                <figure class="direita">
+                                    <a data-fancybox="gallery" href="img/el.jpg"><img src="img/el.jpg"alt="Elfo Sangrento"></a>
+                    
+                                </figure>
+                                <figure class="direita">
+                                    <a data-fancybox="gallery" href="img/100.jpg"><img src="img/100.jpg"alt="Goblin"></a>                    
+                                </figure>
+                                <figure class="direita">
+                                        <a data-fancybox="gallery" href="img/orcn.jpg"><img src="img/orcn.jpg"alt="Orc"></a>
+
+                                </figure>
+                                <figure class="esquerda">
+                                        <a data-fancybox="gallery" href="img/panda.jpg"><img src="img/panda.jpg"alt="Pandaren"></a>
+                                                            
+                                </figure>
+                                <figure class="esquerda">
+                                        <a data-fancybox="gallery" href="img/tau.jpg"><img src="img/tau.jpg"alt="Tauren"></a>
+                                                            
+                                </figure>
+                                <figure class="esquerda">
+                                        <a data-fancybox="gallery" href="img/aqui.jpg"><img src="img/aqui.jpg"alt="Troll"></a>                                              
+                                </figure>
+                
+                            </section>
+                </section>
+            </section>
+            
+           
+            <section id="video">
+                    <h1>Vídeos</h1>
+                    <p>Veja a história de Illidan e Sylvanas nesses vídeos/cinemáticas.</p>
+                    <iframe  src="https://www.youtube.com/embed/1qwfSXXD2NY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/SBJjHHFBOP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+                </section>
+                
+           
+                <section id="sylvanas"> 
+                    <h1>Sylvanas - História</h1>
+                        <p>No passado, Sylvana já foi a general-patrulheira de Luaprata, uma comandante encarregada de defender o reino dos elfos de Quel'thalas. Sua habilidade de liderança foi posta à prova quando o Lich Rei e seu Flagelo de mortos-vivos atacaram a nação. Apesar de lutar bravamente, Sylvana foi abatida pelos invasores profanos. Arthas Menethil, o cavaleiro da morte do Flagelo, arrancou a alma da general-patrulheira e a transformou em uma banshee, um fantasma vingativo forçado a servir o Lich Rei.</p>
+                <div class="parallax2">
+                        <div class="dentro">
+                              <div class="box">
+                          <p class="box">Sylvanas</p>   
+                                </div>
+                        </div>                          
+                </div>
+                
+                </section>
+                        <h1>Illidan - História</h1>
+                        <p>"Aprisionado por dez mil anos. Banido da minha própria terra natal. E agora, você ousa entrar no MEU reino? Você não está preparado"
+                        <p>Illidan Tempesfúria foi o auto-intitulado Senhor de Terralém, governando do Templo Negro. Ele nasceu como um elfo noturno, e como afirmado por Maiev Cantonegro, tornou-se "Nem demônio nem elfo noturno, mas algo maior". Ele era o irmão gêmeo de Malfurion Tempesfúria e era apaixonado por Tyrande Murmuréolo. Outrora um feiticeiro extraordinariamente talentoso, as extensões de seus poderes tornaram-se difíceis de classificar pois seus poderes aumentaram muito em pouco tempo como um caçador de demônios e por absorver os poderes do Crânio de Gul'dan.</p>
+                
+                    <section id="illidan"> 
+                            <div class="parallax">
+                                    <div class="dentro">
+                                          <div class="box">
+                                    <p class="box">Illidan</p> 
+                                            </div>
+                                    </div>                          
+                            </div>                   
+        </main>
+        <footer>
+            <p class="f">Feito por Débora Alberta Bussiman Gomes</p>
+            <p class="f">Técnico em Informática 2017 C</p>
+
+        </footer>
+        <div class="limpar"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(".suave").click(function(event){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1500);
+});
+	  </script>  
+	  
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>	
+ <script type="text/javascript">
+    // função que muda o texto do botão ao clicar
+    function buttonExibirClick() {
+      let botao    = document.getElementById("btExibir");
+      let txtAtual = botao.innerHTML;
+      // isso é um if ternario
+      botao.innerHTML = (txtAtual === "Ver mais") ? "Ver menos" : "Ver mais";
+    }  
+</script>
+<script>
+window.onscroll = function() {scrollFunction()};
+function scrollFunction(){
+  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+    document.getElementById("topo").style.top = "calc(100% - 64px)";
+  }
+  else{
+    document.getElementById("topo").style.top = "150%";
+  }
+}
+</script>
+    
+</body>
+</html>
